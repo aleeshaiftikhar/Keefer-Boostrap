@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* Outer Wrapper for Gray Borders & Center Frame */
+.outer-wrapper {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-left: 22px solid #777;
+    border-right: 22px solid #777;
+}
+
+/* ================= HEADER ================= */
+.main-header {
+    background: #fff;
+    padding: 15px 25px;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.header-right {
+    text-align: right;
+}
+
+.call-us {
+    color: #8b1c1c;
+    font-size: 27px;
+    font-weight: 900;
+    border-bottom: 4px solid #5a5a5a;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.phone-number {
+    color: #000;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.sub-phone {
+    color: #4e4c4c;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* ================= NAVIGATION ================= */
+.main-nav {
+    background: #6b0000 url('menu_bg.gif') repeat-x;
+    border-top: 1px solid #f7f1f1;
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none; 
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    cursor: pointer;
+    background-color: #6b0000;
+    text-align: center;
+}
+
+.menu-icon-img {
+    height: 15px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.main-nav ul li {
+    padding: 0;
+}
+
+.main-nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18.5px;
+    font-weight: bold;
+    padding: 14px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-nav ul li:first-child a {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    background-color: #7a7a7a !important; 
+    background-image: none !important;  
+    color: #ffffff;
+}
+/* ================= HERO SECTION ================= */
+.hero-section {
+    background-color: #fcfafa;
+}
+/* Equals both boxes height and background image */
+.hero-banner-wrapper {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.hero-banner {
+    object-fit: cover; /* Ensures banner spans height equal to form */
+}
+
+.hero-right {
+    background-image: url("images/form_bg.jpg") !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+/* Custom Text Overrides */
+.q-badge {
+    background: #990000;
+    color: #ffffff;
+    padding: 8px 14px;
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: inline-block;
+    line-height: 1;
+    transform: translateY(5px);
+}
+
+.form-title {
+    font-size: 22px;
+    line-height: 1.15;
+    color: #00070e;
+}
+
+.form-title .blue-text {
+    color: #0f3c6d !important;
+    font-size: 32px;
+}
+
+.form-intro {
+    font-size: 18px; 
+    color: #333;
+}
+
+/* Stamp Rotate */
+.stamp-col {
+    position: relative;
+    top: 15px; 
+}
+
+.stamp-img {
+    max-width: 140px;
+    transform: rotate(15deg);
+    pointer-events: none;
+}
+
+/* Textarea styling */
+.case-textarea {
+    resize: none;
+    font-size: 14px;
+}
+
+.case-textarea::placeholder {
+    color: #6a6a6a;
+    font-size: 20px; 
+}
+
+/* Custom Red Button */
+.submit-red-btn {
+    background: #990000 !important;
+    border: none;
+    font-size: 16px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.submit-red-btn:hover {
+    background: #7a0000 !important;
+}
+/* ================= MIDDLE SECTION ================= */
+.mid-section {
+    background: #ffffff;
+}
+
+/* Serif font style to match original */
+.title-serif {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: 700;
+}
+
+.mid-col h3 {
+    font-size: 19px;
+    color: #444444;
+    letter-spacing: 0.2px;
+}
+
+.highlight {
+    color: #8b0000;
+}
+
+.mid-col h4 {
+    color: #8b0000;
+    font-size: 13px;
+}
+
+.mid-col p {
+    color: #555555;
+    font-size: 12.5px;
+    line-height: 1.35;
+}
+
+/* Content & Clipboard Alignment */
+.col-content {
+    justify-content: flex-start;
+}
+
+.mid-icon-clipboard {
+    max-width: 75px;
+    height: auto;
+    margin-left: 50px !important;
+    flex-shrink: 0;
+}
+
+/* Laptop Image Overlap */
+.laptop-img-wrapper {
+    position: absolute;
+    right: -25px;
+    top: -5px;
+    z-index: 10;
+}
+
+.mid-icon-laptop {
+    max-width: 145px;
+    height: auto;
+}
+
+.mid-icon {
+    max-width: 75px;
+    height: auto;
+}
+
+.cert-badge {
+    max-height: 75px;
+    width: auto;
+}
+
+/* Buttons with background line */
+.btn-line-wrapper {
+    width: 100%;
+}
+.line-container {
+    position: relative;
+    display: flex;
+    align-items: flex-end; /* Line ko top edge ke sath align rakhnay ke liye */
+    width: 100%;
+}
+.bg-line {
+    position: absolute;
+    left: 85px;
+    right: 125px; /* Right side se bhi gap banayega */
+    width: auto;
+    height: 1px;
+    background-color: #d3d3d3;
+    top: 0;
+    z-index: 1;
+}
+.red-btn-small {
+    background: #8b0000;
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 0;
+    position: relative;
+    z-index: 2;
+    margin-left: 125px; /* Button board image ke neechay shift ho jayega */
+}
+.red-btn-small:hover {
+    background: #650000;
+}
