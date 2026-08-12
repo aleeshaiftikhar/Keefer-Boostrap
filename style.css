@@ -1,3 +1,4 @@
+/* Reset & Global */
 * {
     margin: 0;
     padding: 0;
@@ -5,671 +6,544 @@
 }
 
 body {
-    background: #f2f2f2;
     font-family: Arial, Helvetica, sans-serif;
-    color: #444;
-    line-height: 1.4;
+   background-color: #807676;
+    overflow-x: hidden;
+}
+.page-wrapper {
+    background-color: #ffffff;
+    max-width: 96%; /* Margin adjust karne ke liye (e.g. 95% ya 98%) */
+    margin: 0 auto;
+    border-left: 1px solid #b0b0b0;
+    border-right: 1px solid #b0b0b0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+/* ================= HEADER STYLES ================= */
+.top-header {
+    background: #ffffff url('header_bg.jpg') no-repeat center right; /* Optional subtle pillar bg */
+    background-size: cover;
 }
 
-/* Outer Wrapper for Gray Borders & Center Frame */
-.outer-wrapper {
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    border-left: 22px solid #777;
-    border-right: 22px solid #777;
-}
-
-/* ================= HEADER ================= */
-.main-header {
-    background: #fff;
-    padding: 15px 25px;
-}
-
-.logo img {
-    width: 100%;
-    max-width: 500px;
+.header-logo {
+    max-width: 100%;
     height: auto;
 }
 
-.header-right {
-    text-align: right;
+.call-title {
+    color: #990000;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    text-transform: uppercase;
 }
 
-.call-us {
-    color: #8b1c1c;
-    font-size: 27px;
-    font-weight: 900;
-    border-bottom: 4px solid #5a5a5a;
-    display: inline-block;
-    padding-bottom: 2px;
+.call-divider {
+    height: 2px;
+    background-color: #777777;
+    width: 320px;
+    margin: 2px 0 0 auto;
+}
+
+@media (max-width: 767px) {
+    .call-divider {
+        margin: 2px auto 0 auto;
+    }
 }
 
 .phone-number {
-    color: #000;
-    font-size: 52px;
+    font-size: 46px;
     font-weight: 900;
+    color: #222222;
     line-height: 1;
+    margin: 2px 0;
+    letter-spacing: -1px;
 }
 
-.sub-phone {
-    color: #4e4c4c;
-    font-size: 22px;
+.sub-title {
+    font-size: 19px;
+    color: #444444;
+    font-weight: 600;
+}
+
+/* ================= NAVBAR STYLES ================= */
+.custom-navbar {
+    background: linear-gradient(to bottom, #800000 0%, #600000 100%);
+    border-top: 1px solid #a00000;
+    border-bottom: 2px solid #400000;
+}
+
+.header-left-maroon {
+    background: linear-gradient(to bottom, #800000 0%, #600000 100%);
+}
+
+.custom-navbar .nav-link {
+    color: #ffffff !important;
+    font-size: 13px;
     font-weight: 700;
+    padding: 12px 22px !important;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
-/* ================= NAVIGATION ================= */
-.main-nav {
-    background: #6b0000 url('menu_bg.gif') repeat-x;
-    border-top: 1px solid #f7f1f1;
-    width: 100%;
+.custom-navbar .nav-link:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
 
-.nav-toggle {
-    display: none; 
-    color: white;
-    font-weight: bold;
-    padding: 12px;
-    cursor: pointer;
-    background-color: #6b0000;
-    text-align: center;
+/* Active Gray Tab (HOME as in image) */
+.custom-navbar .nav-link.active-gray {
+    background: #666666 !important;
+    color: #ffffff !important;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.4);
 }
-
-.menu-icon-img {
-    height: 15px;
-    vertical-align: middle;
-    margin-right: 5px;
-}
-
-.main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-.main-nav ul li {
-    padding: 0;
-}
-
-.main-nav ul li a {
-    display: block;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18.5px;
-    font-weight: bold;
-    padding: 14px 20px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.main-nav ul li:first-child a {
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.main-nav ul li a:hover,
-.main-nav ul li a.active {
-    background-color: #7a7a7a !important; 
-    background-image: none !important;  
-    color: #ffffff;
-}
-/* ================= HERO SECTION ================= */
-.hero-section {
-    background-color: #fcfafa;
-}
-/* Equals both boxes height and background image */
+/*================ HERO SECTION ================*/
+/* Hero Section Equal Height Styles */
 .hero-banner-wrapper {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
-.hero-banner {
-    object-fit: cover; /* Ensures banner spans height equal to form */
+.hero-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Image bina stretch huay full height/width fit karegi */
+    display: block;
+    border-radius: 4px; /* Optional, agar round borders chahiyein */
 }
 
 .hero-right {
-    background-image: url("images/form_bg.jpg") !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    border: 1px solid #dcdcdc;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-}
-/* Custom Text Overrides */
-.q-badge{
-    background: #990000;
-    color: #ffffff;
-     padding: 6px 12px;
-    font-size: 27px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    white-space: nowrap;
-    display: inline-block;
-    line-height: 1;
-    position: relative;
-    top: -32px;
-    left: -15.2px;
-    margin-right: 25px;
-}
-.form-title {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.15;
-    margin: 0;
+    height: 100%;
+    background-color: #e9ecef; /* Ya jo aapka form ka background shade hai */
+    padding: 15px;
+    box-sizing: border-box;
 }
 
-/* "Have a" bold aur bada */
-.form-title .have-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: #00070e;
-}
-
-/* "Question" bold aur bada */
-.form-title .blue-text {
-    color: #0d3b66 !important;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-/* "About Your Case?" bold aur bada */
-.form-title .subtitle-text {
-    font-size: 20px;
-    font-weight: bold;
-    color: #111111;
-    display: inline-block;
-    margin-top: 3px;
-}
-.form-intro{
-    font-size:18px;
-    color:#333;
-    margin-bottom:0;
-}
-/* Stamp Rotate */
-.stamp-col {
-    position: relative;
-    top: 15px; 
-    left: 8px;
-}
-
-.stamp-img {
-    max-width: 140px;
-    transform: rotate(15deg);
-    pointer-events: none;
-}
-
-/* Textarea styling */
-.case-textarea {
+/* Textarea height adjustment taake form overlap na ho */
+.case-form textarea {
     resize: none;
-    font-size: 14px;
+}
+.hero-section{
+    background:#fcfafa;
+    padding:35px 0;
 }
 
-.case-textarea::placeholder {
-    color: #6a6a6a;
-    font-size: 20px; 
+/* LEFT */
+
+.hero-left{
+    position:relative;
 }
 
-/* Custom Red Button */
-.submit-red-btn {
-    background: #990000 !important;
-    border: none;
+.hero-banner{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    box-shadow:0 0 10px rgba(0,0,0,.25);
+}
+
+/* Right Side Main Box Background */
+.hero-right {
+    background: #e2e2e2 url("images/form_bg.jpg") no-repeat center;
+    background-size: cover;
+    border-color: #dcdcdc !important;
+    height: 100%;
+}
+/* Label Minimum Fixed Width (Taake Teeno Inputs Horizontal Ek Alignment Mein Hon) */
+.label-fixed {
+    width: 65px;
+    margin-right: 0; /* Gap ab HTML ki 'me-2' class handle kar rahi hai */
+}
+
+/* Input Boxes Container (90% Width) */
+.custom-input-wrap {
+    width: 50%; /* 👈 Width 90% set ho gayi hai */
+}
+
+/* Base Form Control Style */
+.case-form .form-control {
+    border: 1px solid #777;
+    background-color: #ffffff;
+    height: 32px;
+}
+/* Red "QUESTIONS?" Badge Placement */
+.q-badge {
+    background-color: #990000;
+    color: #ffffff;
+    padding: 8px 18px;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+/* Question Header Text Sizing */
+.blue-text {
+    color: #0f3c6d;
+    font-size: 36px;
+}
+
+.form-label-custom {
+    color: #000;
     font-size: 16px;
-    font-weight: normal;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
 }
 
-.submit-red-btn:hover {
-    background: #7a0000 !important;
+/* Input Boxes Controls (Name, Email, Phone) */
+.case-form .form-control {
+    border: 1px solid #777;       /* Input Box Border Color */
+    background-color: #ffffff;    /* Input Box Background */
+    height: 14px;                 /* Input Box Height */
+   
+}
+
+/* Input Active Focus (Red Outline) */
+.case-form .form-control:focus {
+    border-color: #990000;
+    box-shadow: none;
+}
+
+/* Textarea Box Custom Control */
+.case-form textarea {
+    resize: none;
+    min-height: 85px;
+}
+
+/* Confidential Stamp Controls */
+.confidential-stamp {
+    position: absolute;
+    bottom: 134px;
+    right: 35px;
+    width: 150px;
+    pointer-events: none;
+    transform: rotate(380deg);
+}
+
+/* Submit Button Control */
+.red-btn {
+    background-color: #990000;
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.red-btn:hover {
+    background-color: #700000;
+    color: #ffffff;
 }
 /* ================= MIDDLE SECTION ================= */
+
 .mid-section {
-    background: #ffffff;
+    background: #fff;
+    padding: 30px 0;
 }
 
-/* Serif font style to match original */
-.title-serif {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-weight: 700;
-}
-
-.mid-col h3 {
-    font-size: 25px;
-    color: #444444;
-    letter-spacing: 0.2px;
-}
-
-.highlight {
-    color: #8b0000;
-}
-
+/* Headings Styling */
+.mid-col h3, 
 .mid-col h4 {
-    color: #8b0000;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 5px;
 }
 
+/* Red Highlight Text */
+.highlight {
+    color: #990000 !important;
+}
+
+/* Paragraph Text */
 .mid-col p {
-    color: #555555;
-    font-size: 12.5px;
-    line-height: 1.35;
+    color: #444;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
-.mid-icon-clipboard {
-    max-width: 90px;
-    height: auto;
-    flex-shrink: 0;
+/* Red Button (Aapke original colors matching) */
+.red-btn-small, 
+.btn-danger {
+    background: #990000 !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 6px 16px !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    transition: 0.3s;
 }
 
-.mid-icon-lawblog{
-    max-width: 145px;
-    height: auto;
+.red-btn-small:hover, 
+.btn-danger:hover {
+    background: #700000 !important;
+    color: #fff !important;
 }
 
+/* Vertical Dividing Lines for Desktop Screens */
+@media (min-width: 992px) {
+    .border-end-lg {
+        border-right: 1px solid #d9d9d9 !important;
+    }
+}
+
+/* Icons & Images Sizing */
 .mid-icon {
-    max-width: 150px;   /* 75px se bara */
-    height: auto;
+    max-height: 85px;
+    width: auto;
 }
 
 .cert-badge {
     max-height: 75px;
     width: auto;
+    transition: transform 0.3s ease;
 }
 
-/* Buttons with background line */
-.btn-line-wrapper {
-    width: 100%;
+/* Hover Effect on Badges */
+.cert-badge:hover {
+    transform: scale(1.05);
 }
-.line-container {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
+.text-dark-red {
+    color: #990000 !important;
 }
-
-.bg-line {
-    position: absolute;
-    height: 1px;
-    background-color: #d3d3d3;
-    z-index: 1;
-}
-.red-btn-small {
-    background: #8b0000;
-    color: #ffffff !important;
-    text-decoration: none;
-    padding: 4px 10px;
-    font-size: 13px;
-    font-weight: normal;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    border-radius: 0;
-    position: relative;
-    z-index: 2;
-    margin-left: 125px; /* Button board image ke neechay shift ho jayega */
-}
-.red-btn-small:hover {
-    background: #650000;
-}
-/* LAW BLOG SECTION */
-.sub-row:first-child .line-container {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    position: relative;
-}
-
-.sub-row:first-child .bg-line {
-    position: absolute;
-    left: 2px;
-    right: 220px;   /* jitna barhao gi utni right side se line choti hogi */
-    width: auto;
-}
-
-/* Law Blog Paragraph Font Size */
-.sub-row:first-child .sub-row-text p {
-    font-size: 20px !important;
-    line-height: 1.35;
-    color: #333333;
-}
-.sub-row:last-child .red-btn-small {
-    margin-left: 35px;   /* pehle 125px tha */
-    padding: 6px 14px !important; /* Pehle 4px 10px tha */
-    font-size: 12.5px !important;  /* Pehle 11px tha */
-}
-
-.sub-row:last-child .bg-line{
-    left: 2px;
-    right: 220px;
-    height: 1px;
-    background: #d3d3d3;
-}
-/* Title ka font layout fix */
-.title-serif {
-    font-family: Georgia, 'Times New Roman', serif;
-    letter-spacing: 0.3px;
-}
-
-/* Heading top margin reset & shifted down */
-.sub-row:last-child .sub-row-text h3 {
-    margin-top: 10px !important;
-}
-
-/* Case Results ke paragraph font scaling */
-.sub-row:last-child .sub-row-text p {
-    font-size: 16px !important;
-    line-height: 1.35;
-    color: #333333;
-}
-/* Custom CSS (Jab opacity aur negative margin fix karne hon) */
-.divider-wrapper {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.divider-img {
-    width: 100%;
-    height: auto;
-    opacity: 0.8; 
+/* Horizontal Rule Custom Styling */
+.mid-section hr {
+    border-top: 1px solid #d9d9d9;
+    opacity: 1;
 }
 /*==================================================
-                 MAIN CONTENT
+                DIVIDER
 ==================================================*/
 
-.main-content {
-    background: #fff;
-    padding-bottom: 25px;
+.divider{
+    text-align:center;
+    margin:20px 0;
 }
 
-/*================ LEFT SIDEBAR =================*/
-
-.left-sidebar h3 {
-    font-size: 28px;
-    color: #444;
-    margin-bottom: 20px;
-    text-align: left; 
+.divider img{
+    width:100%;
+    max-width:100%;
+    margin-top:-60px;
 }
 
-.left-sidebar h3 span {
-    color: #8b0000; 
+/*==================================================
+                MAIN CONTENT
+==================================================*/
+
+.main-content{
+    background:#fff;
+    margin-top:-40px;
+    padding:30px 0;
 }
 
-.practice-list {
-    margin: 0 0 30px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px; 
-    max-width: 265px;
+/*==================================================
+                LEFT SIDEBAR
+==================================================*/
+
+.left-sidebar h3{
+    font-size:28px;
+    color:#444;
+    margin-bottom:20px;
+    font-weight:bold;
 }
 
-.practice-list li {
-    background: linear-gradient(to bottom, #857c7c, #7e7e7e); 
-    border-radius: 4px;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255,255,255,0.2); 
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.left-sidebar h3 span{
+    color:#8b0000;
 }
 
-.practice-list li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 12px; 
-    background: linear-gradient(to bottom, #8b0000, #5a0000); 
-    border-right: 1px solid rgba(0,0,0,0.1);
+.practice-list{
+    list-style:none;
+    padding:0;
+    margin:0 0 30px;
 }
 
-.practice-list li a {
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between;
-    text-decoration: none;
-    padding: 18px 15px 12px 28px; 
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
+.practice-list li{
+    background:linear-gradient(to bottom,#857c7c,#7e7e7e);
+    margin-bottom:15px;
+    border-radius:4px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 6px 8px rgba(0,0,0,.4);
 }
 
-.practice-list .learn-arrow {
-    align-self: flex-end; 
-    font-size: 14px;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-    margin-top: 8px; 
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 2px;
+.practice-list li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:12px;
+    height:100%;
+    background:#8b0000;
 }
 
-.practice-list li:hover {
-    transform: translateY(-2px); 
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.75);
-    background: linear-gradient(to bottom, #8f8f8f, #6d6d6d); 
+.practice-list li a{
+    display:flex;
+    flex-direction:column;
+    padding:18px 15px 12px 28px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
 }
 
-.learn-more-about-title {
-    margin-top: 20px;
-    font-size: 20px; 
-    text-align: left;
-}
-.menu-area-placeholder {
-    background: none;
-    border: none; /* Dotted line remove kar di hai */
-    height: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    font-weight: bold;
-    color: #cec5c5;
-    margin-top: 15px;
-    gap: 4px;
-    letter-spacing: 2px;
+.learn-arrow{
+    align-self:flex-end;
+    margin-top:8px;
+    font-size:13px;
 }
 
-/*================ CENTER ARTICLE =================*/
-
-.center-article h1 {
-    font-family: Georgia, 'Times New Roman', serif; 
-    font-size: 28px;               
-    color: #444444;               
-    margin-bottom: 25px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
+.red-arrow{
+    color:#8b0000;
 }
 
-.center-article p {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-    font-size: 13.5px;               
-    color: #666666;                
-    line-height: 2.2;              
-    margin-bottom: 18px;
-    text-align: justify;           
+.learn-more-about-title{
+    margin-top:30px;
 }
 
-/*================ RIGHT SIDEBAR =================*/
-
-.right-sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: center;
+.menu-area-placeholder{
+    height:180px;
+    background:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    color:#cfcfcf;
+    font-weight:bold;
 }
 
-.right-action-item {
-    padding: 10px 0;
-    width: 100%;
+/*==================================================
+                CENTER ARTICLE
+==================================================*/
+
+.center-article h1{
+    font-family:Georgia,serif;
+    font-size:30px;
+    color:#444;
+    margin-bottom:25px;
 }
 
-.right-action-item h4 {
-    font-family: Georgia, 'Times New Roman', serif; 
-    font-size: 22px;
-    color: #444;
-    margin-bottom: 6px;
-    line-height: 1.2;
-    letter-spacing: 0.1px;
-    text-align: center;
+.center-article p{
+    font-size:14px;
+    color:#666;
+    line-height:2;
+    text-align:justify;
 }
 
-.right-action-item h4 span {
-    color: #8b0000;
+/*==================================================
+                RIGHT SIDEBAR
+==================================================*/
+
+.right-sidebar{
+    text-align:center;
 }
 
-.right-action-item p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    color: #444; 
-    margin-bottom: 15px;
-    line-height: 1.2;
-    text-align: center;
-    font-weight: 500;
+.right-action-item{
+    padding:20px 0;
 }
 
-.red-btn-small {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: linear-gradient(to bottom, #b30000, #800000);
-    color: #ffffff !important;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding: 6px 14px;
-    border-radius: 1px;
-    border-top: 1px solid #d94d4d;
-    border-bottom: 1px solid #4d0000;
-    position: relative; 
-    z-index: 5;
-    transition: transform 0.2s ease, background 0.2s ease;
+.right-action-item h4{
+    font-family:Georgia,serif;
+    font-size:22px;
+    color:#444;
 }
 
-.red-btn-small span {
-    font-size: 9px;
-    color: #ffffff;
+.right-action-item h4 span{
+    color:#8b0000;
 }
 
-.red-btn-small:hover {
-    background: linear-gradient(to bottom, #c60000, #990000);
-    transform: translateY(-1px);
+.right-action-item p{
+    font-size:17px;
+    color:#555;
+    line-height:1.4;
 }
 
-.right-sidebar hr {
-    border: none;
-    height: 2px;
-    background-color: #817676;
-    width: 80%;
-    margin: 20px auto; 
-    position: relative;
-    z-index: 1; 
+.right-sidebar hr{
+    margin:25px auto;
+    width:70%;
 }
 
-.sidebar-badges {
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+.red-btn-small{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#990000;
+    color:#fff;
+    text-decoration:none;
+    padding:8px 16px;
+    font-size:12px;
+    font-weight:bold;
 }
 
-.sidebar-badges img[alt="Avvo"] {
-    width: 180px;
-    height: auto;
+.red-btn-small:hover{
+    background:#700000;
+    color:#fff;
 }
 
-.sidebar-badges img[alt="National College"] {
-    width: 140px;
-    height: auto;
-    border-radius: 12px;
+.sidebar-badges{
+    margin:30px 0;
 }
 
-.follow-us {
-    text-align: center;
-    width: 100%;
-    margin-top: 10px;
-    position: relative;
+.sidebar-badges img{
+    display:block;
+    margin:15px auto;
 }
 
-.follow-us h4 {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 24px;
-    color: #444;
-    letter-spacing: 0.1px;
-    margin-bottom: 10px;
+.follow-us{
+    margin-top:30px;
 }
 
-.follow-us h4 span {
-    color: #8b0000;
+.follow-us h4{
+    font-size:24px;
+    font-family:Georgia,serif;
 }
 
-.right-sidebar hr.follow-shadow {
-    margin: 10px auto 15px auto;
-    width: 80%;
+.follow-us span{
+    color:#8b0000;
 }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 15px;
+.follow-shadow{
+    width:70%;
+    margin:15px auto;
 }
 
-.social-icons img {
-    width: 38px;
-    height: auto;
-    transition: transform 0.2s;
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
 }
 
-.social-icons img:hover {
-    transform: translateY(-2px);
-}
-/* Custom Red Top Strip */
-.bottom-maroon-bar {
-    height: 10px;
-    background: linear-gradient(to right, #5b0000, #8b0000, #5b0000);
+.social-icons img{
+    width:38px;
+    transition:.3s;
 }
 
-/* Light Grey Background for Footer */
-.bottom-grey-footer.bg-light-grey {
-    background-color: #444 !important;
-    min-height: 20px;
+.social-icons img:hover{
+    transform:translateY(-2px);
 }
 
-/* Base Image & Form Field Defaults */
-img {
-    max-width: 100%;
-    height: auto;
+/*==================================================
+                FOOTER
+==================================================*/
+
+.main-footer{
+    margin-top:20px;
 }
 
-button {
-    cursor: pointer;
+.bottom-maroon-bar{
+    height:10px;
+    background:linear-gradient(to right,#5b0000,#8b0000,#5b0000);
 }
 
-/* Smooth Hover Animation */
-.hero-btn,
-.red-btn,
-.red-btn-small {
-    transition: transform 0.3s ease, background-color 0.3s ease;
+.bottom-grey-footer{
+    background:#3f3f3f;
+    min-height:20px;
 }
-
-.hero-btn:hover,
-.red-btn:hover,
-.red-btn-small:hover {
-    transform: translateY(-2px);
+@media (min-width: 992px) {
+    .right-sidebar .right-action-item h4 {
+        font-weight: 700 !important;
+    }
 }
-/* Sidebar ke arrow ko maroon karne ke liye */
-.red-arrow {
-    color: #8b0000 !important;
-}
-
